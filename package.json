@@ -1,0 +1,24 @@
+{
+  "name": "mrk-connolly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrk-Connolly/mrk-connolly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrk-Connolly/mrk-connolly/issues"
+  },
+  "homepage": "https://github.com/Mrk-Connolly/mrk-connolly#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
