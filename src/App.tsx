@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import About from "./pages/About";
 
-function App() {
-  const [count, setCount] = useState(0)
+function Home() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,7 +31,25 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <nav style={{ marginBottom: "2rem" }}>
+        <Link to="/" style={{ marginRight: "1rem" }}>
+          Home
+        </Link>
+        <Link to="/about">About</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
